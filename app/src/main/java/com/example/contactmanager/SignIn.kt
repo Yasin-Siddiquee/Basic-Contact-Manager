@@ -40,7 +40,7 @@ class SignIn : AppCompatActivity() {
         database = FirebaseDatabase.getInstance().getReference("Users")
         database.child(uniqueId).get().addOnSuccessListener {
             if (it.exists()){
-                val intent = Intent(this,Add_Contact::class.java)
+                val intent = Intent(this,MyContacts::class.java)
                 intent.putExtra(KEY,binding.userName.text.toString())
                 startActivity(intent)
 
